@@ -2,3 +2,19 @@
 - hosts: all
   roles:
     - role: ansible-role-mod-php
+  post_tasks:
+      - name: APT install curl
+        apt:
+            name: curl
+            state: present
+
+      - name: Add phpinfo script
+        copy:
+            content: |
+                <?php
+                phpinfo()
+                ?>
+            dest: /var/www/html/phpinfo.php
+            owner: root
+            group: root
+            mode: 0o0644

@@ -1,15 +1,18 @@
 galaxy_info:
   author: Nimrod Adar
-  description: An example Ansible role
+  description: Provision PHP application server using Apache with mod-php
   company: Shore technologies
   license: MIT
   min_ansible_version: 2.0
   platforms:
-  - name: OpenBSD
+  - name: Debian
     versions:
-    - 6.0
-  - name: Ubuntu
-    versions:
-    - xenial
-  galaxy_tags: [ ansible ]
-dependencies: []
+    - jessie
+  galaxy_tags: [ PHP ]
+dependencies:
+    - src: https://www.shore.co.il/git/ansible-role-php5
+      scm: git
+      name: PHP5
+    - src: https://www.shore.co.il/git/ansible-role-apache
+      scm: git
+      name: Apache

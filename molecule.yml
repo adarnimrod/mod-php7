@@ -4,19 +4,16 @@ ansible:
   playbook: tests/playbook.yml
   diff: True
   config_file: ../ansible.cfg
-  requirements_file: tests/requirements.yml
 
 vagrant:
   providers:
   - name: virtualbox
     type: virtualbox
   platforms:
-  - name: openbsd
-    box: kaorimatz/openbsd-6.0-amd64
-  - name: ubuntu
-    box: ubuntu/xenial64
+  - name: debian
+    box: debian/jessie64
   instances:
-  - name: ansible-role-example
+  - name: ansible-role-mod-php
     options:
         append_platform_to_hostname: yes
   raw_config_args:

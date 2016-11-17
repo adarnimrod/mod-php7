@@ -1,9 +1,7 @@
-Example
+mod-php
 #######
 
-An (empty) example Ansible role complete with working tests out of the box. For
-more information read the `blog post
-<https://www.shore.co.il/blog/ansible-example-role/>`_.
+Provision PHP application server using Apache with mod-php.
 
 Requirements
 ------------

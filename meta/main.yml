@@ -5,14 +5,16 @@ galaxy_info:
   license: MIT
   min_ansible_version: 2.0
   platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
   - name: Debian
     versions:
     - jessie
   galaxy_tags: [ PHP ]
 dependencies:
-    - src: https://www.shore.co.il/git/ansible-role-php5
-      scm: git
-      name: PHP5
-    - src: https://www.shore.co.il/git/ansible-role-apache
-      scm: git
-      name: Apache
+    - name: adarnimrod.php5
+      src: adarnimrod.php5
+    - name: adarnimrod.apache
+      src: adarnimrod.apache

@@ -1,7 +1,6 @@
 ---
 - hosts: all
-  roles:
-    - role: ansible-role-mod-php
+  roles: [mod-php]
   post_tasks:
       - name: APT install curl
         apt:

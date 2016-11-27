@@ -14,7 +14,7 @@ vagrant:
   - name: virtualbox
     type: virtualbox
   platforms:
-  - name: debian
+  - name: jessie
     box: debian/jessie64
   instances:
   - name: mod-php
@@ -28,13 +28,20 @@ vagrant:
 
 docker:
   containers:
-  - name: mod-php-trusty
-    image: ubuntu
-    image_version: trusty
-    environment:
-        DEBIAN_FRONTEND: noninteractive
   - name: mod-php-jessie
     image: debian
     image_version: jessie
+    command: /sbin/init
+    cap_add:
+      - SYS_ADMIN
+    volume_mounts:
+      - /sys/fs/cgroup:/sys/fs/cgroup
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+    environment:
+        DEBIAN_FRONTEND: noninteractive
+        container: docker
+  - name: mod-php-trusty
+    image: ubuntu
+    image_version: trusty
     environment:
         DEBIAN_FRONTEND: noninteractive

@@ -3,8 +3,8 @@
   strategy: free
   roles: [mod-php]
   post_tasks:
-      - name: APT install curl
-        apt:
+      - name: Install cURL
+        package:
             name: curl
             state: present
 

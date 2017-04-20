@@ -3,7 +3,7 @@ galaxy_info:
   description: Provision PHP application server using Apache with mod-php
   company: Shore technologies
   license: MIT
-  min_ansible_version: 2.0
+  min_ansible_version: 2.3
   platforms:
   - name: Ubuntu
     versions:
@@ -13,7 +13,7 @@ galaxy_info:
     - jessie
   galaxy_tags: [ PHP ]
 dependencies:
-    - name: adarnimrod.php5
+    - name: php5
       src: adarnimrod.php5
-    - name: adarnimrod.apache
+    - name: apache
       src: adarnimrod.apache

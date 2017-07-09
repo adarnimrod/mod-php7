@@ -9,4 +9,4 @@ def test_mod_php(Command, Sudo):
 
 
 def test_phpinfo(Command):
-    'PHP Version 5' in Command('curl http://localhost/phpinfo.php').stdout
+    'PHP Version 7.0' in Command('curl http://localhost/phpinfo.php').stdout

@@ -1,10 +1,10 @@
-mod-php
-#######
+mod-php7
+########
 
-.. image:: https://travis-ci.org/adarnimrod/mod-php.svg?branch=master
-    :target: https://travis-ci.org/adarnimrod/mod-php
+.. image:: https://travis-ci.org/adarnimrod/mod-php7.svg?branch=master
+    :target: https://travis-ci.org/adarnimrod/mod-php7
 
-Provision PHP application server using Apache with mod-php.
+Provision PHP7 application server using Apache with mod-php7.
 
 Requirements
 ------------

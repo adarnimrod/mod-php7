@@ -1,19 +1,19 @@
 galaxy_info:
   author: Nimrod Adar
-  description: Provision PHP application server using Apache with mod-php
+  description: Provision PHP7 application server using Apache with mod-php7
   company: Shore technologies
   license: MIT
   min_ansible_version: 2.3
   platforms:
   - name: Ubuntu
     versions:
-    - trusty
+    - xenial
   - name: Debian
     versions:
-    - jessie
+    - stretch
   galaxy_tags: [ PHP ]
 dependencies:
-    - name: php5
-      src: adarnimrod.php5
+    - name: php7
+      src: adarnimrod.php7
     - name: apache
       src: adarnimrod.apache

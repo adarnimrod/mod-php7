@@ -9,8 +9,8 @@ env:
         - VBOX_MEMORY=2048
         - VBOX_HWVIRTEX=off
     matrix:
-        - TOXENV=trusty
-        - &jessie TOXENV=jessie
+        - TOXENV=xenial
+        - &stretch TOXENV=stretch
 
 cache:
   - pip
@@ -34,6 +34,8 @@ notifications:
 
 matrix:
     fast_finish: True
+    allow_failures:
+        - env: *stretch
     include:
         - env:
             TOXENV: pre-commit

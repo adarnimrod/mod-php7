@@ -1,5 +1,5 @@
 ---
-# tasks file for mod-php
+# tasks file for mod-php7
 - name: Assertions
   assert:
     that:
@@ -7,14 +7,14 @@
 
 - name: APT install
   apt:
-      name: libapache2-mod-php5
+      name: libapache2-mod-php7.0
       state: present
       update_cache: yes
       cache_valid_time: 3600
 
 - name: Enable PHP module
   apache2_module:
-      name: php5
+      name: php7.0
       state: present
   notify:
       - Restart Apache

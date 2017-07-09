@@ -19,7 +19,7 @@
 
 - hosts: all
   strategy: free
-  roles: [mod-php]
+  roles: [mod-php7]
   post_tasks:
       - name: Install cURL
         package:
